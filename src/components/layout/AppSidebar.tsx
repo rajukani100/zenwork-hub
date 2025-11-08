@@ -7,6 +7,9 @@ import {
   Settings,
   Calendar,
   User,
+  Play,
+  Palette,
+  Sliders,
 } from 'lucide-react';
 import { NavLink } from '@/components/NavLink';
 import { useAuth } from '@/contexts/AuthContext';
@@ -38,7 +41,9 @@ const navigationByRole = {
   ],
   payroll: [
     { title: 'Dashboard', url: '/payroll/dashboard', icon: LayoutDashboard },
-    { title: 'Payruns', url: '/payroll/payruns', icon: DollarSign },
+    { title: 'Pay Runs', url: '/payroll/payruns', icon: Play },
+    { title: 'Configuration', url: '/payroll/configuration', icon: Sliders },
+    { title: 'Payslip Designer', url: '/payroll/designer', icon: Palette },
     { title: 'Reports', url: '/payroll/reports', icon: FileText },
   ],
   admin: [

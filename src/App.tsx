@@ -10,6 +10,10 @@ import EmployeeDashboard from "./pages/employee/EmployeeDashboard";
 import EmployeeProfile from "./pages/employee/EmployeeProfile";
 import HRDashboard from "./pages/hr/HRDashboard";
 import PayrollDashboard from "./pages/payroll/PayrollDashboard";
+import Payruns from "./pages/payroll/Payruns";
+import Configuration from "./pages/payroll/Configuration";
+import Designer from "./pages/payroll/Designer";
+import Reports from "./pages/payroll/Reports";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import NotFound from "./pages/NotFound";
 
@@ -59,6 +63,38 @@ const App = () => (
               element={
                 <ProtectedRoute allowedRoles={['payroll']}>
                   <PayrollDashboard />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/payroll/payruns"
+              element={
+                <ProtectedRoute allowedRoles={['payroll']}>
+                  <Payruns />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/payroll/configuration"
+              element={
+                <ProtectedRoute allowedRoles={['payroll']}>
+                  <Configuration />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/payroll/designer"
+              element={
+                <ProtectedRoute allowedRoles={['payroll']}>
+                  <Designer />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/payroll/reports"
+              element={
+                <ProtectedRoute allowedRoles={['payroll']}>
+                  <Reports />
                 </ProtectedRoute>
               }
             />
